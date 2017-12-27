@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({
 
 // config.json is in application root
 json = readJsonFileSync('config.json')
+mongoose.Promise = Promise
 var urlDB = getDBUrl()
 
 function readJsonFileSync(filepath, encoding){
