@@ -22,7 +22,7 @@
 </div>
 <script>
     var socket = io()
-    
+
     $(() => {
         $("#send").click(()=>{
             var message = { name: $("#name").val(), message: $("#message").val()}
@@ -38,12 +38,12 @@
     }
 
     function getMessages() {
-        $.get('http://localhost:3000/messages', (data) => {
+        $.get('http://localhost:5001/messages', (data) => {
             data.forEach(addMessage);
         })
     }
 
     function postMessage(message) {
-        $.post('http://localhost:3000/messages', message)
+        $.post('http://localhost:5001/messages', message)
     }
 </script>
